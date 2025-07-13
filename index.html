@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Store</title>
+    <title>Die Büchertek</title>
     <link rel="icon" type="image/x-icon" href="./assets/ico/books-7479152_1280.png">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./styles/standard.css">
+    <link rel="stylesheet" href="./styles/items.css">
     <script src="./scripts/arrays.js"></script>
     <script src="./scripts/functions.js"></script>
     <script src="./scripts/templates.js"></script>
@@ -16,25 +17,31 @@
 
 </head>
 
-<body onload="createMyBookObjectNamesArray(), checkCheckbox()" >
+<body onload="createMyBookObjectNamesArray(), checkCheckbox()">
     <header>
-    
+        <div class="header">
+            <div class="headerLogo"><img class="headerBooksIcon" src="./assets/ico/books-7479152_1280.png" alt="">
+                <h1>Die Büchertek</h1>
+            </div>
+            <input id="myInputNameId" class="myInputName" type="text" autocomplete="off"
+                placeholder="Gib dein Namen ein. ">
+        </div>
     </header>
 
     <main>
         <div id="buttonsId">
             <input id="checkboxId" type="checkbox" checked="true" onclick="checkCheckbox()">
             <button id="likeButtonId" onclick="commentAdd(0)">Button</button>
-            <input id="myInputNameId" class="myInputName" type="text" autocomplete="off" placeholder="Gib dein Namen ein. " >
+
         </div>
-        <h1>Book Store</h1>
+
         <p id="myBooksId">TEST</p>
     </main>
 
 
     <footer>
     </footer>
-<script src="./script.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 
