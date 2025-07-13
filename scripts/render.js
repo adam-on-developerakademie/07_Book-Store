@@ -1,20 +1,16 @@
 
-let myBookObjectNamesArray = []
+
 function createMyBookObjectNamesArray() {
     let myBookObjectNames = '';
     for (const objectName in books[0]) {
         myBookObjectNames += '"' + objectName + '",';
     }
-    myBookObjectNames = myBookObjectNames.substring(0, myBookObjectNames.length - 1)
+    myBookObjectNames = myBookObjectNames.substring(0, myBookObjectNames.length - 1);
     myBookObjectNames = '[' + myBookObjectNames + ']'
     myBookObjectNamesArray = JSON.parse(myBookObjectNames)
-    console.log(myBookObjectNames)
-    console.log(myBookObjectNamesArray)
-
-
+    //console.log(myBookObjectNames)
+    //console.log(myBookObjectNamesArray)
 }
-
-let myBook = document.getElementById('myBooksId')
 
 function renderBooksContent() {
     myBook.innerHTML = '';
@@ -22,6 +18,7 @@ function renderBooksContent() {
         myBook.innerHTML += `<div id=book${j}>${setMyBookContent(j)}</div><br>`
     }
 }
+
 function setMyBookContent(j) {
     let myContent = ''; let contentValue = ''
     for (i = 0; i < myBookObjectNamesArray.length - 1; i++) {

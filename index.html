@@ -8,24 +8,24 @@
     <link rel="icon" type="image/x-icon" href="./assets/ico/books-7479152_1280.png">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./styles/standard.css">
-    <script src="./scripts/books.js"></script>
-    <script src="./script.js"></script>
-    
+    <script src="./scripts/arrays.js"></script>
+    <script src="./scripts/functions.js"></script>
+    <script src="./scripts/templates.js"></script>
+    <script src="./scripts/render.js"></script>
 
 
 </head>
 
-<body onload="createMyBookObjectNamesArray(), renderBooksContent()" >
+<body onload="createMyBookObjectNamesArray(), checkCheckbox()" >
     <header>
     
     </header>
 
     <main>
         <div id="buttonsId">
-            <button id="likeButtonId" onclick="likedFunction()">Button</button>
-            <img id="heartOn" src="./assets/ico/Like.png" alt="Like is true" class="heartOn switchOff">
-            <img id="heartOff" src="./assets/ico/Dislike.png" alt="Like is false" class="heartOff">
-
+            <input id="checkboxId" type="checkbox" checked="true" onclick="checkCheckbox()">
+            <button id="likeButtonId" onclick="likedFunction(0)">Button</button>
+            <input id="myInputId" class="myInput" type="text" placeholder="Gib dein Kommentar ab. ">
         </div>
         <h1>Book Store</h1>
         <p id="myBooksId">TEST</p>
@@ -34,9 +34,9 @@
 
     <footer>
     </footer>
-
+<script src="./script.js"></script>
 </body>
-<script src="./scripts/buttons.js"></script>
-<script src="./scripts/render.js"></script>
-<script src="./scripts/templates.js"></script>
+
+
+
 </html>

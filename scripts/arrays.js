@@ -1,3 +1,4 @@
+let myBookObjectNamesArray = [];
 const books = [
     {
       "name": "Die Geheimnisse des Ozeans",
@@ -172,4 +173,7 @@ const books = [
         }
       ]
     }
-  ]
+  ];
+
+
+
