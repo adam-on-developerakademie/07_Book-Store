@@ -15,18 +15,19 @@ function createMyBookObjectNamesArray() {
 }
 
 let myBook = document.getElementById('myBooksId')
-myBook.innerHTML = ''
 
 function renderBooksContent() {
+    myBook.innerHTML = '';
     for (j = 0; j < books.length; j++) {
         myBook.innerHTML += `<div id=book${j}>${setMyBookContent(j)}</div><br>`
     }
 }
 function setMyBookContent(j) {
-    let myContent = '';
+    let myContent = ''; let contentValue = ''
     for (i = 0; i < myBookObjectNamesArray.length - 1; i++) {
         let myPropertie = 'books[j].' + myBookObjectNamesArray[i]
-        myContent += `<p>${myBookObjectNamesArray[i]}: ${eval(myPropertie)}</p>`
+        if (i == 3) { contentValue = hearts(j) } else { contentValue = eval(myPropertie) }
+        myContent += `<p>${myBookObjectNamesArray[i]}: ${contentValue}</p>`
     }
     myContent = myContent + myCommentsContent(j)
     return myContent
@@ -41,7 +42,7 @@ function myCommentsContent(j) {
 }
 
 function renderBooksContent4OneBook(j) {
-            myBook.innerHTML += `<div id=book${j}>${setMyBookContent(j)}</div><br>`
+    myBook.innerHTML = `<div id=book${j}>${setMyBookContent(j)}</div><br>`
 }
 
 //renderBooksContent()

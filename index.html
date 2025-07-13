@@ -15,11 +15,18 @@
 
 </head>
 
-<body onload="createMyBookObjectNamesArray(), renderBooksContent4OneBook(0)" >
+<body onload="createMyBookObjectNamesArray(), renderBooksContent()" >
     <header>
+    
     </header>
 
     <main>
+        <div id="buttonsId">
+            <button id="likeButtonId" onclick="likedFunction()">Button</button>
+            <img id="heartOn" src="./assets/ico/Like.png" alt="Like is true" class="heartOn switchOff">
+            <img id="heartOff" src="./assets/ico/Dislike.png" alt="Like is false" class="heartOff">
+
+        </div>
         <h1>Book Store</h1>
         <p id="myBooksId">TEST</p>
     </main>
@@ -29,5 +36,7 @@
     </footer>
 
 </body>
+<script src="./scripts/buttons.js"></script>
 <script src="./scripts/render.js"></script>
+<script src="./scripts/templates.js"></script>
 </html>
