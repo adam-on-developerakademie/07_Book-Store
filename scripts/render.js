@@ -26,11 +26,11 @@ function setMyBookContent(j) {
         if (i == 3) { contentValue = hearts(j) } else { contentValue = eval(myPropertie) }
         myContent += `<p>${myBookObjectNamesArray[i]}: ${contentValue}</p>`
     }
-    myContent = myContent + myCommentsContent(j)
+    myContent = myContent + commentsContent(j) + myCommentInput(j)
     return myContent
 }
 
-function myCommentsContent(j) {
+function commentsContent(j) {
     let myComents = 'comments:'
     for (k = 0; k < books[j].comments.length; k++) {
         myComents += `<p>${books[j].comments[k].name}: ${books[j].comments[k].comment}</p>`
