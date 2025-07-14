@@ -23,7 +23,7 @@ function setMyBookContent(j) {
     let myContent = ''; let contentValue = ''
     for (i = 0; i < myBookObjectNamesArray.length - 1; i++) {
         let myPropertie = 'books[j].' + myBookObjectNamesArray[i]
-        if (i == 0) { contentValue = `${eval(myPropertie)}` }
+        if (i == 0) { contentValue = `${eval(myPropertie)} <img src="./assets/img/read.png" alt="Image placeholder" class="tempImg">` }
         if (i > 0 && i < 4) { i = 3; contentValue = myContentTable(j) }
         if (i == 4) {i=10; contentValue = myPriceAndLikes(j) }
         myContent += `<p class="content` + i + `">` + contentValue + `</p>`
