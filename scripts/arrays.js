@@ -8,7 +8,7 @@ const books = [
       "likes": 1250,
       "liked": true,
       "price": 19.99,
-
+      "bookimage":"read.png",
       "comments": [
         {
           "name": "Leser123",
@@ -40,6 +40,7 @@ const books = [
       "likes": 980,
       "liked": false,
       "price": 14.50,
+      "bookimage":"read.png",
       "comments": []
     },
     {
@@ -50,6 +51,7 @@ const books = [
       "likes": 1520,
       "liked": true,
       "price": 22.95,
+      "bookimage":"read.png",
       "comments": [
         {
           "name": "LeserPeter",
@@ -81,7 +83,7 @@ const books = [
       "likes": 750,
       "liked": false,
       "price": 18.00,
-
+      "bookimage":"read.png",
       "comments": [
         {
           "name": "BuchKenner",
@@ -101,6 +103,7 @@ const books = [
       "likes": 1300,
       "liked": true,
       "price": 16.75,
+      "bookimage":"read.png",
       "comments": []
     },
     {
@@ -111,6 +114,7 @@ const books = [
       "likes": 890,
       "liked": false,
       "price": 12.30,
+      "bookimage":"read.png",
       "comments": [
         {
           "name": "BücherLiebhaber",
@@ -130,6 +134,7 @@ const books = [
       "likes": 1450,
       "liked": true,
       "price": 21.00,
+      "bookimage":"read.png",
       "comments": [
         {
           "name": "Leser123",
@@ -145,6 +150,7 @@ const books = [
       "likes": 920,
       "liked": false,
       "price": 17.50,
+      "bookimage":"read.png",
       "comments": [
         {
           "name": "Bookworm92",
@@ -160,6 +166,7 @@ const books = [
       "likes": 1800,
       "liked": true,
       "price": 19.99,
+      "bookimage":"read.png",
       "comments": [
         {
           "name": "Bibliophile23",

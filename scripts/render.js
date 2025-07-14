@@ -15,33 +15,31 @@ function createMyBookObjectNamesArray() {
 function renderBooksContent() {
     myBook.innerHTML = '';
     for (j = 0; j < books.length; j++) {
-        myBook.innerHTML += `<li id=book${j}>${setMyBookContent(j)}</li>`
+        myBook.innerHTML += `<li id=book${j} class="myBook>">${setMyBookContent(j)}</li>`
     }
 }
 
 function setMyBookContent(j) {
-    let myContent = ''; let contentValue = ''
-    for (i = 0; i < myBookObjectNamesArray.length - 1; i++) {
-        let myPropertie = 'books[j].' + myBookObjectNamesArray[i]
-        if (i == 0) { contentValue = `${eval(myPropertie)} <img src="./assets/img/read.png" alt="Image placeholder" class="tempImg">` }
-        if (i > 0 && i < 4) { i = 3; contentValue = myContentTable(j) }
-        if (i == 4) {i=10; contentValue = myPriceAndLikes(j) }
-        myContent += `<p class="content` + i + `">` + contentValue + `</p>`
-    }
-    myContent = myContent + commentsContent(j) + myCommentInput(j)
+    let myContent = ''; let contentValue = '';let myPropertie = 'books[j].' + myBookObjectNamesArray[0]
+        contentValue += `<div class="titleContent"> ${eval(myPropertie)}<img src="./assets/img/${books[j].bookimage}" alt="Image placeholder" class="tempImg"></div>`;
+        contentValue += myContentTable(j);
+        contentValue += myPriceAndLikes(j); 
+        myContent += `${contentValue}`
+        myContent += commentsContent(j) 
     return myContent
 }
 
 function commentsContent(j) {
-    let myComents = 'Kommentare:'
+    let myComents = `<p>Kommentare:</p>`
     for (k = 0; k < books[j].comments.length; k++) {
         myComents += `<p>${books[j].comments[k].name}: ${books[j].comments[k].comment}</p>`
     }
+    myComents = `${myComents}<p class="myInputTemplate">${myCommentInput(j)}<img src="./assets/img/pencil.png" alt="pencil image" class="saveComentImg"></p>`
     return myComents
 }
 
 function renderBooksContent4OneBook(j) {
-    myBook.innerHTML = `<li id=book${j}>${setMyBookContent(j)}</li>`
+    myBook.innerHTML = `<li id=book${j} class="myBook>">${setMyBookContent(j)}</li>`
 }
 
 //renderBooksContent()
