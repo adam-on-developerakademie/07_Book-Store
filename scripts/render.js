@@ -15,7 +15,7 @@ function createMyBookObjectNamesArray() {
 function renderBooksContent() {
     myBook.innerHTML = '';
     for (j = 0; j < books.length; j++) {
-        myBook.innerHTML += `<div id=book${j}>${setMyBookContent(j)}</div><br>`
+        myBook.innerHTML += `<li id=book${j}>${setMyBookContent(j)}</li>`
     }
 }
 
@@ -23,15 +23,17 @@ function setMyBookContent(j) {
     let myContent = ''; let contentValue = ''
     for (i = 0; i < myBookObjectNamesArray.length - 1; i++) {
         let myPropertie = 'books[j].' + myBookObjectNamesArray[i]
-        if (i == 3) { contentValue = hearts(j) } else { contentValue = eval(myPropertie) }
-        myContent += `<p>${myBookObjectNamesArray[i]}: ${contentValue}</p>`
+        if (i == 0) { contentValue = `${eval(myPropertie)}` }
+        if (i > 0 && i < 4) { i = 3; contentValue = myContentTable(j) }
+        if (i == 4) {i=10; contentValue = myPriceAndLikes(j) }
+        myContent += `<p class="content` + i + `">` + contentValue + `</p>`
     }
     myContent = myContent + commentsContent(j) + myCommentInput(j)
     return myContent
 }
 
 function commentsContent(j) {
-    let myComents = 'comments:'
+    let myComents = 'Kommentare:'
     for (k = 0; k < books[j].comments.length; k++) {
         myComents += `<p>${books[j].comments[k].name}: ${books[j].comments[k].comment}</p>`
     }
@@ -39,7 +41,7 @@ function commentsContent(j) {
 }
 
 function renderBooksContent4OneBook(j) {
-    myBook.innerHTML = `<div id=book${j}>${setMyBookContent(j)}</div><br>`
+    myBook.innerHTML = `<li id=book${j}>${setMyBookContent(j)}</li>`
 }
 
 //renderBooksContent()

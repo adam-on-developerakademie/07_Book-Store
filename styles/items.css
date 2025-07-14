@@ -1,20 +1,32 @@
-.heartOn{
+.heartOn {
     height: 50px;
     width: 50px;
 }
-.heartOff{
+
+.heartOff {
     height: 50px;
     width: 50px;
 }
-.heartOn:hover{
-   transform: scale(1.3);
+
+.heartOn:hover {
+    transform: scale(1.3);
     transition-duration: 0.5s;
 }
-.heartOff:hover{
-   transform: scale(1.3);
+
+.heartOff:hover {
+    transform: scale(1.3);
     transition-duration: 0.5s;
 }
-.letsRed::placeholder{
+
+.letsRed::placeholder {
     color: red;
 }
 
+.content0 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 30px;
+}
+
+p{margin: 0;}

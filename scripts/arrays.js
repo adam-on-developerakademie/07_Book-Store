@@ -2,12 +2,13 @@ let myBookObjectNamesArray = [];
 const books = [
     {
       "name": "Die Geheimnisse des Ozeans",
-      "author": "Clara Meer",
+      "Author": "Clara Meer",
+      "Erscheinungsjahr": 2018,
+      "Genre": "Fantasy",
       "likes": 1250,
       "liked": true,
       "price": 19.99,
-      "publishedYear": 2018,
-      "genre": "Fantasy",
+
       "comments": [
         {
           "name": "Leser123",
@@ -33,22 +34,22 @@ const books = [
     },
     {
       "name": "Der vergessene Pfad",
-      "author": "Maximilian Schwarz",
+      "Author": "Maximilian Schwarz",
+      "Erscheinungsjahr": 2021,
+      "Genre": "Fantasy",
       "likes": 980,
       "liked": false,
       "price": 14.50,
-      "publishedYear": 2021,
-      "genre": "Fantasy",
       "comments": []
     },
     {
       "name": "Die Farben des Himmels",
-      "author": "Laura Blau",
+      "Author": "Laura Blau",
+      "Erscheinungsjahr": 2019,
+      "Genre": "Romantik",
       "likes": 1520,
       "liked": true,
       "price": 22.95,
-      "publishedYear": 2019,
-      "genre": "Romantik",
       "comments": [
         {
           "name": "LeserPeter",
@@ -74,12 +75,13 @@ const books = [
     },
     {
       "name": "Das Rätsel der Zeit",
-      "author": "Alexander Weiss",
+      "Author": "Alexander Weiss",
+      "Erscheinungsjahr": 2020,
+      "Genre": "Science-Fiction",
       "likes": 750,
       "liked": false,
       "price": 18.00,
-      "publishedYear": 2020,
-      "genre": "Science-Fiction",
+
       "comments": [
         {
           "name": "BuchKenner",
@@ -93,22 +95,22 @@ const books = [
     },
     {
       "name": "Der letzte Wächter",
-      "author": "Sabine Grün",
+      "Author": "Sabine Grün",
+      "Erscheinungsjahr": 2017,
+      "Genre": "Fantasy",
       "likes": 1300,
       "liked": true,
       "price": 16.75,
-      "publishedYear": 2017,
-      "genre": "Fantasy",
       "comments": []
     },
     {
       "name": "Im Schatten des Mondes",
-      "author": "Philipp Silber",
+      "Author": "Philipp Silber",
+      "Erscheinungsjahr": 2022,
+      "Genre": "Science-Fiction",
       "likes": 890,
       "liked": false,
       "price": 12.30,
-      "publishedYear": 2022,
-      "genre": "Science-Fiction",
       "comments": [
         {
           "name": "BücherLiebhaber",
@@ -122,12 +124,12 @@ const books = [
     },
     {
       "name": "Jenseits der Sterne",
-      "author": "Oliver Schwarz",
+      "Author": "Oliver Schwarz",
+      "Erscheinungsjahr": 2015,
+      "Genre": "Science-Fiction",
       "likes": 1450,
       "liked": true,
       "price": 21.00,
-      "publishedYear": 2015,
-      "genre": "Science-Fiction",
       "comments": [
         {
           "name": "Leser123",
@@ -137,12 +139,12 @@ const books = [
     },
     {
       "name": "Das verborgene Königreich",
-      "author": "Elena Gold",
+      "Author": "Elena Gold",
+      "Erscheinungsjahr": 2020,
+      "Genre": "Fantasy",
       "likes": 920,
       "liked": false,
       "price": 17.50,
-      "publishedYear": 2020,
-      "genre": "Fantasy",
       "comments": [
         {
           "name": "Bookworm92",
@@ -152,12 +154,12 @@ const books = [
     },
     {
       "name": "Liebe in Zeiten des Krieges",
-      "author": "Emilia Rot",
+      "Author": "Emilia Rot",
+      "Erscheinungsjahr": 2016,
+      "Genre": "Romantik",
       "likes": 1800,
       "liked": true,
       "price": 19.99,
-      "publishedYear": 2016,
-      "genre": "Romantik",
       "comments": [
         {
           "name": "Bibliophile23",

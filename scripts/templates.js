@@ -8,5 +8,22 @@ function hearts(j) {
     }
 }
 
-function myCommentInput(j){
-    return`<input id="myInputId${j}" class="myInput${j}" type="text" autocomplete="off" onkeydown="if(event.key==='Enter') {commentAdd(${j})}" placeholder="Gib dein Kommentar ab. "></input>` }
+function myCommentInput(j) {
+    return `<input id="myInputId${j}" class="myInputComment" type="text" autocomplete="off" onkeydown="if(event.key==='Enter') {commentAdd(${j})}" placeholder="Gib dein Kommentar ab. "></input>`
+}
+
+function myContentTable(j) {
+    let contentTable = '';
+    for (i = 0; i < 3; i++) {
+        let myTablePropertie = 'books[j].' + myBookObjectNamesArray[i + 1];
+        contentTable += `<tr><th class="row1">` + myBookObjectNamesArray[i + 1] + `</th><th class="row2">: ` + eval(myTablePropertie) + `</th></tr>`
+    }
+    contentTable = `<table>` + contentTable + `</table>`
+    return(contentTable)
+}
+function myPriceAndLikes(j){
+    let myPriceContent= '<div class="priceAndLikes"><div class="priceAndLikesInner"> <div class="myPrice">'+ books[j].price +' €</div>'+'<div class="myLikes">'+ books[j].likes+'</div></div>'+hearts(j)+'</div>'
+    console.log(myPriceContent)
+    return(myPriceContent)
+
+}

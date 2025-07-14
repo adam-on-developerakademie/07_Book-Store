@@ -20,11 +20,11 @@
 <body onload="createMyBookObjectNamesArray(), checkCheckbox()">
     <header>
         <div class="header">
-            <div class="headerLogo"><img class="headerBooksIcon" src="./assets/ico/books-7479152_1280.png" alt="">
+            <div class="headerLogo"><img class="headerBooksIcon" src="./assets/ico/books-7479152_1280.png" alt="Büchertek Logo">
                 <h1>Die Büchertek</h1>
             </div>
             <input id="myInputNameId" class="myInputName" type="text" autocomplete="off"
-                placeholder="Gib dein Namen ein. ">
+                placeholder="Gib den Besuchernamen ein. ">
         </div>
     </header>
 
@@ -32,10 +32,8 @@
         <div id="buttonsId">
             <input id="checkboxId" type="checkbox" checked="true" onclick="checkCheckbox()">
             <button id="likeButtonId" onclick="commentAdd(0)">Button</button>
-
         </div>
-
-        <p id="myBooksId">TEST</p>
+        <ul id="myBooksId"></ul>
     </main>
 
 

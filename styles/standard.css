@@ -12,8 +12,20 @@ header {
     background-image: linear-gradient(to bottom, azure, rgb(92, 247, 68), azure);
     display: flex;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
+main{
+    max-width: 1920px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .switchOff {
     display: none;
+}
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
