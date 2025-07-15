@@ -10,7 +10,7 @@ function likedFunction(j) {
     checkCheckbox(j);
 }
 
-function commentAdd(j) {
+function commentAdd(j) {booksVar[0] = document.getElementById('myInputNameId').value;  saveToLocalStorage();
     if (document.getElementById('myInputNameId').value == '') { document.getElementById('myInputNameId').focus(); document.getElementById('myInputNameId').classList.toggle('letsRed'); booksVar[2] = j }
     else {
         if (document.getElementById('myInputId' + j).value == '') { document.getElementById('myInputId' + j).focus(); document.getElementById('myInputId' + j).classList.toggle('letsRed') } else {
