@@ -1,13 +1,19 @@
-html {scroll-behavior: smooth;}
+:root{
+    --position: relative;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-color: azure;
-    overflow-x: hidden;
+
 }
 
 header {
@@ -19,21 +25,35 @@ header {
     margin-bottom: 50px;
 }
 
-main{
+main {
     max-width: 1920px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+
 }
+
+footer {
+    height: 100px;
+    width: 100%;
+    background-image: linear-gradient(to bottom, azure, rgb(92, 247, 68), azure);
+    display: flex;
+    justify-content: center;
+    position: var(--position);
+    bottom: 0;
+}
+
 .switchOff {
     display: none;
 }
-ul{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
+
 p {
     margin: 0;
     padding-left: 15px;
