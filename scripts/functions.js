@@ -58,6 +58,6 @@ function myOnclickRight(l) {
 function goBack() {
     booksVar[0] = document.getElementById('myInputNameId').value
     saveToLocalStorage();
-    myElement = 'myInputId' + booksVar[2]
+    if(Character.isDigit(booksVar[2])) {myElement = 'myInputId' + booksVar[2]
     document.getElementById(myElement).focus()
-}
+}}
