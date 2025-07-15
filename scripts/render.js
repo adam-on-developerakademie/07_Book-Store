@@ -24,7 +24,6 @@ function setMyBookContent(j) {
     myContent += commentsContent(j)
     return myContent
 }
-booksVar[1]
 
 function commentsContent(j) {
     let myComents = ''; let myComentsHead = ''

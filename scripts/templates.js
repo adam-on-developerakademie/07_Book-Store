@@ -21,6 +21,7 @@ function myContentTable(j) {
     contentTable = `<table class="table1">` + contentTable + `</table>`
     return (contentTable)
 }
+
 function myPriceAndLikes(j) {
     let myNumber = (books[j].price).toFixed(2)
     let myPriceContent = `<div class="priceAndLikes"><div class="priceAndLikesInner"> <div class="myPrice">${myNumber} €</div></div><div class="likesAndHeart">${hearts(j)}<div class="myLikes">${books[j].likes}</div></div></div></div>`
@@ -35,7 +36,6 @@ function noClickLeftRight(j, myPropertie) {
            <img src="./assets/img/${books[j].bookimage}" alt="Image placeholder" class="tempImg">
            <img src="./assets/ico/right-146368_1280.png" alt="Right" class="myRight" onclick="checkIn(), myOnclickRight(${j})">
         </div>`;
-
     return (myLeftRightClick)
 }
 

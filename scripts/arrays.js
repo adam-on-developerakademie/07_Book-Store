@@ -1,5 +1,7 @@
 let myBookObjectNamesArray = [];
-let booksVar=["",true,1];
+
+let booksVar=["",true,0];
+
 let books = [
     {
       "name": "Die Geheimnisse des Ozeans",
