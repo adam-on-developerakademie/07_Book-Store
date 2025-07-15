@@ -10,7 +10,8 @@ function likedFunction(j) {
     checkCheckbox(j);
 }
 
-function commentAdd(j) {booksVar[0] = document.getElementById('myInputNameId').value;  saveToLocalStorage();
+function commentAdd(j) {
+    booksVar[0] = document.getElementById('myInputNameId').value; saveToLocalStorage();
     if (document.getElementById('myInputNameId').value == '') { document.getElementById('myInputNameId').focus(); document.getElementById('myInputNameId').classList.toggle('letsRed'); booksVar[2] = j }
     else {
         if (document.getElementById('myInputId' + j).value == '') { document.getElementById('myInputId' + j).focus(); document.getElementById('myInputId' + j).classList.toggle('letsRed') } else {
@@ -58,6 +59,8 @@ function myOnclickRight(l) {
 function goBack() {
     booksVar[0] = document.getElementById('myInputNameId').value
     saveToLocalStorage();
-    if(Character.isDigit(booksVar[2])) {myElement = 'myInputId' + booksVar[2]
-    document.getElementById(myElement).focus()
-}}
+    if (booksVar[2] >= 0 && booksVar[2] < 9) {
+        myElement = 'myInputId' + booksVar[2]
+        document.getElementById(myElement).focus()
+    }
+}
