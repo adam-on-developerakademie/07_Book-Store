@@ -1,12 +1,13 @@
-function checkCheckbox() {
-    if (document.getElementById('checkboxId').checked) { renderBooksContent4OneBook(0); }
-    else { renderBooksContent() }
+function checkCheckbox(j) {
+    if (document.getElementById('checkboxId').checked) { renderBooksContent4OneBook(j); }
+    else { renderBooksContent(j) }
 }
 
 function likedFunction(j) {
     if (books[j].liked == false) { books[j].liked = true; books[j].likes += 1 }
     else { books[j].liked = false; books[j].likes += -1 };
-    checkCheckbox();
+    saveToLocalStorage();
+    checkCheckbox(j);
 }
 
 function commentAdd(j) {
@@ -16,6 +17,40 @@ function commentAdd(j) {
         let myComment = `{"name": "${myUserName}", "comment": "${myCommentContent}"}`
         myComment = JSON.parse(myComment)
         books[j].comments.splice(0, 0, myComment);
-        checkCheckbox()
+        saveToLocalStorage();
+        checkCheckbox(j)
     }
 }
+
+function checkIn() {
+    document.getElementById('checkboxId').checked = true
+    saveToLocalStorage();
+}
+
+function saveToLocalStorage() {
+    localStorage.setItem('books', JSON.stringify(books));
+    localStorage.setItem('booksVar', JSON.stringify(booksVar));
+}
+
+function loadFromLocalStorage(i) {
+    if (typeof localStorage != 'undefined') {
+        if (localStorage.getItem('books') != null && localStorage.getItem('booksVar') != null) {
+            books = JSON.parse(localStorage.getItem('books'));
+            booksVar = JSON.parse(localStorage.getItem('booksVar'));
+            document.getElementById('myInputNameId').value=booksVar[0]
+            document.getElementById('checkboxId').value=booksVar[1]
+            if (document.getElementById('checkboxId').checked) { renderBooksContent4OneBook(i) } else { renderBooksContent() };
+        } else { saveToLocalStorage() }
+    }
+}
+
+function myOnclickLeft(l) {
+    if (l - 1 == -1) { l = books.length - 1 } else { l = l - 1 };
+    { renderBooksContent4OneBook(l) }
+}
+function myOnclickRight(l) {
+    if (l + 1 == books.length) { l = 0 } else { l = l + 1 };
+    { renderBooksContent4OneBook(l) }
+}
+
+

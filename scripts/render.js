@@ -17,13 +17,14 @@ function renderBooksContent() {
 
 function setMyBookContent(j) {
     let myContent = ''; let contentValue = ''; let myPropertie = 'books[j].' + myBookObjectNamesArray[0]
-    contentValue += `<div class="titleContent"> ${eval(myPropertie)}<img src="./assets/img/${books[j].bookimage}" alt="Image placeholder" class="tempImg"></div>`;
+    contentValue += noClickLeftRight(j, myPropertie)
     contentValue += myContentTable(j);
     contentValue += myPriceAndLikes(j);
     myContent += `${contentValue}`
     myContent += commentsContent(j)
     return myContent
 }
+booksVar[1]
 
 function commentsContent(j) {
     let myComents = ''; let myComentsHead = ''
@@ -31,7 +32,7 @@ function commentsContent(j) {
     for (k = 0; k < books[j].comments.length; k++) {
         myComents += `<tr><th class="commentRow1">${books[j].comments[k].name}:</th><th class="commentRow2">${books[j].comments[k].comment}</th></tr>`
     }
-    let myComentsfooter = `<p class="myInputTemplate">${myCommentInput(j)}<img src="./assets/img/pencil.png" alt="pencil image" class="saveComentImg" onclick="commentAdd(${j})"></p>`
+    let myComentsfooter = `<div class="myInputTemplate">${myCommentInput(j)}<img src="./assets/img/pencil.png" alt="pencil image" class="saveComentImg" onclick="commentAdd(${j})"></div>`
     myComents = `${myComentsHead}<div class="myComents"><table class="table2">${myComents}</table></div>${myComentsfooter}`
     return myComents
 }

@@ -16,21 +16,21 @@
     <script src="./script.js" defer></script>
 </head>
 
-<body onload="createMyBookObjectNamesArray(), checkCheckbox()">
+<body onload="loadFromLocalStorage(0), createMyBookObjectNamesArray(), checkCheckbox(0)">
     <header>
         <div class="header">
             <div class="headerLogo"><img class="headerBooksIcon" src="./assets/ico/books-7479152_1280.png"
                     alt="Büchertek Logo">
                 <h1>Die Büchertek</h1>
             </div>
-            <input id="myInputNameId" class="myInputName" type="text" autocomplete="off"
+            <input id="myInputNameId" class="myInputName" type="text" autocomplete="off" 
                 placeholder="trage dein Namen ein">
         </div>
     </header>
 
     <main>
         <div id="buttonsId">
-            <input id="checkboxId" type="checkbox" checked="true" onclick="checkCheckbox()">
+            <input id="checkboxId" type="checkbox" checked="true" onclick="checkCheckbox(0)">
         </div>
         <ul id="myBooksId"></ul>
     </main>
