@@ -16,9 +16,10 @@ body {
 }
 
 @media (max-width: 1000px) {
-body::-webkit-scrollbar{
-width: 1px;
-}}
+    body::-webkit-scrollbar {
+        width: 1px;
+    }
+}
 
 header {
     height: 100px;

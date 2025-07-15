@@ -26,14 +26,28 @@
 .myLeft {
     height: 40px;
     width: 40px;
-    padding-right: 30px;
+    padding-right: 50px;
 }
+
+@media (max-width: 520px) {
+    .myLeft {
+        padding:0;
+    }
+}
+
 .myRight {
     height: 40px;
     width: 40px;
-    padding-left: 30px;
+    padding-left: 50px;
 }
-.myLeftRight{
+
+@media (max-width: 520px) {
+    .myRight {
+        padding: 0;
+    }
+}
+
+.myLeftRight {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,6 +57,13 @@
     height: 150px;
     width: 200px;
     padding-top: 20px;
+}
+
+@media (max-width: 400px) {
+    .tempImg {
+        height: 100px;
+        width: 150px;
+    }
 }
 
 .myPrice {

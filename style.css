@@ -66,6 +66,12 @@ li {
     }
 }
 
+@media (max-width: 400px) {
+    .titleContent {
+        font-size: 20px;
+    }
+}
+
 .myBook {
     display: flex;
     flex-direction: column;
@@ -93,18 +99,11 @@ li {
 }
 
 .commentRow1 {
-
     text-align: up;
     vertical-align: top;
     text-align: end;
     max-width: 150px;
     overflow-wrap: break-word;
-}
-
-@media (max-width: 600px) {
-    th {
-        font-size: 14px;
-    }
 }
 
 @media (max-width: 400px) {
@@ -114,7 +113,34 @@ li {
 }
 
 .commentRow2 {
+    text-align: up;
+    vertical-align: top;
     text-align: end;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 520px) {
+    .commentRow2 {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 450px) {
+    .commentRow2 {
+        max-width: 180px;
+    }
+}
+
+@media (max-width: 350px) {
+    .commentRow2 {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 600px) {
+    th {
+        font-size: 14px;
+    }
 }
 
 .priceAndLikes {
@@ -169,13 +195,11 @@ li {
 @media (max-width: 550px) {
     .myInputComment {
         width: 80%;
-
     }
 }
 
 @media (max-width: 400px) {
     .myInputComment {
         width: 70%;
-
     }
 }
