@@ -23,7 +23,7 @@
                     alt="Büchertek Logo">
                 <h1>Die Büchertek</h1>
             </div>
-            <input id="myInputNameId" class="myInputName" type="text" autocomplete="off" 
+            <input id="myInputNameId" class="myInputName" type="text" autocomplete="off" onkeydown="if(event.key==='Enter') {saveToLocalStorage()}"
                 placeholder="trage dein Namen ein">
         </div>
     </header>
