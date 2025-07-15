@@ -18,12 +18,12 @@ function myContentTable(j) {
         let myTablePropertie = 'books[j].' + myBookObjectNamesArray[i + 1];
         contentTable += `<tr><th class="row1">${myBookObjectNamesArray[i + 1]}</th><th class="row2">: ${eval(myTablePropertie)}</th></tr>`
     }
-    contentTable = `<table>` + contentTable + `</table>`
-    return(contentTable)
+    contentTable = `<table class="table1">` + contentTable + `</table>`
+    return (contentTable)
 }
-function myPriceAndLikes(j){
-    let myPriceContent= `<div class="priceAndLikes"><div class="priceAndLikesInner"> <div class="myPrice">${books[j].price} €</div></div><div class="likesAndHeart">${hearts(j)}<div class="myLikes">${books[j].likes}</div></div></div></div>`
-    console.log(myPriceContent)
-    return(myPriceContent)
+function myPriceAndLikes(j) {
+    let myNumber = (books[j].price).toFixed(2) 
+    let myPriceContent = `<div class="priceAndLikes"><div class="priceAndLikesInner"> <div class="myPrice">${myNumber} €</div></div><div class="likesAndHeart">${hearts(j)}<div class="myLikes">${books[j].likes}</div></div></div></div>`
+    return (myPriceContent)
 
 }
