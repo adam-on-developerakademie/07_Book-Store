@@ -23,7 +23,7 @@ function myContentTable(j) {
 }
 
 function myPriceAndLikes(j) {
-    let myNumber = (books[j].price).toFixed(2)
+    let myNumber = ((books[j].price).toFixed(2)).replace('.',',')
     let myPriceContent = `<div class="priceAndLikes"><div class="priceAndLikesInner"> <div class="myPrice">${myNumber} €</div></div><div class="likesAndHeart">${hearts(j)}<div class="myLikes">${books[j].likes}</div></div></div></div>`
     return (myPriceContent)
 
